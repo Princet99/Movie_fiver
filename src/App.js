@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// Svg icons https://reactsvgicons.com/
+import "./App.css";
+import { Home } from "./component/Home.js";
+import { Header } from "./component/Header.js";
+import About from "./component/About.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Movie from "./component/Movie.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Movie/:id" element={<Movie />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar</title>
+    <style>
+      /* Container for the search bar */
+      .navBar {
+        background-color: #333;
+      }
+      .search-container {
+        display: flex;
+        align-items: center;
+        /* border: 2px solid #f3ce00; */
+        border-radius: 5px;
+        padding: 5px;
+        background-color: white;
+        width: 400px;
+      }
+
+      /* Style for the dropdown */
+      .search-container select {
+        border: none;
+        font-size: 16px;
+        padding: 5px;
+        background: white;
+        cursor: pointer;
+      }
+
+      /* Style for the input */
+      .search-container input[type="text"] {
+        flex: 1;
+        border: none;
+        font-size: 16px;
+        padding: 5px;
+        outline: none;
+      }
+
+      /* Style for the search button */
+      .search-container button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        color: #333;
+      }
+
+      /* Style for the search icon */
+      .search-container button img {
+        width: 16px;
+        height: 16px;
+      }
+
+      /* Adjust focus styles */
+      .search-container input:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navBar">
+      <div class="search-container">
+        <select>
+          <option value="all">All</option>
+          <!-- Add other dropdown options here -->
+        </select>
+        <input type="text" placeholder="Search IMDb" />
+        <button>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg"
+            alt="Search"
+          />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+
+.NavBar {
+  height: 60px;
+  background-color: #121212;
+  color: #E0E0E0;
+  display: flex;
+  justify-content: space-between; /* Space out elements (logo and search container) */
+  align-items: center;
+  padding: 0 20px; /* Add padding for spacing on left and right */
+  position: relative;
+  z-index: 100;
+}
+#search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 2px solid yellowgreen;
+  width: 400px;
+  border-radius: 5px;
+  position: absolute; /* Position the search container absolutely */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); 
+  /* Offset by half its width to center */
+}
+
+#search_container select {
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+#search_container input {
+  flex: 1;
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+  outline: none;
+}
+
+#search_container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#search_container button img {
+  height: 16px;
+  width: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 15px; /* Space between the logo and the input field */
+}
+
+.logo img {
+  height: 40px; /* Adjust logo height */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 8px; /* Space between the icon and the text */
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.About{
+  text-decoration: none;
+}
+
+/* DropDown css */
+.drop {
+  max-height: calc(6 * 60px);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-width: 500px;
+  background-color: #1a1a1a;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: calc(6 * 60px); /* Adjust the height (e.g., 60px per item) based on your design */
+  overflow-y: auto; /* Enables vertical scrolling */
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin ;
+}
+
+
+
+.drop li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.drop li:last-child {
+  border-bottom: none;
+}
+
+.drop li:hover {
+  background-color: #938585;
+}
+
+.drop img {
+  width: 50px;
+  height: 75px;
+  margin-right: 10px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.drop a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.drop a:hover {
+  color: #007bff;
+}

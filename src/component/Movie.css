@@ -1,0 +1,312 @@
+#root {
+  background-color: #1a1a1a;
+}
+.Movie_Heading {
+  display: flex;
+  flex-direction: column;
+
+  /* align-items: center; */
+}
+
+.Movie_title {
+  margin: 15px 0px 0px 15px;
+  font-weight: 800;
+  color: white;
+}
+
+.Movie_details span {
+  margin-left: 15px;
+  font-weight: 800;
+  color: white;
+}
+
+.Movie_details {
+  display: flex;
+  display: inline-block;
+}
+
+.Movie_body {
+  height: 100%;
+}
+
+.Movie_Content {
+  display: flex;
+}
+
+.Movie_Content img {
+  margin: 15px 2px 15px 15px;
+  border-radius: 15px;
+}
+/* Trailer */
+.Movie_Trailer {
+  margin: 15px 2px 15px 15px;
+  width: 50%;
+  position: relative;
+  height: 350px;
+}
+
+.Movie_Trailer iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+/* credits */
+.Movie_credits {
+  margin: 15px 2px 15px 15px;
+  color: white;
+  width: 35%;
+}
+
+.Movie_Crew {
+  font-weight: 600;
+  margin-left: 50%;
+}
+/* Overview */
+
+.Movie_Overview {
+  width: 50%;
+  margin: 15px 2px 15px 15px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.toggle-button {
+  background: none; /* Remove default button background */
+  color: #007bff; /* Set text color to blue (or any color that fits your theme) */
+  border: none; /* Remove borders */
+  text-decoration: underline; /* Make it look like a hyperlink */
+  font-size: 14px;
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  padding: 0; /* Remove padding to make it inline */
+  margin-top: 5px;
+}
+
+.toggle-button:hover {
+  color: #0056b3; /* Darker color on hover for better visibility */
+}
+
+.toggle-button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Genres */
+
+.Movie_genres {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.Movie_genres .items {
+  display: inline-block;
+  border-radius: 12px;
+  border: 1px solid white;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+/* Credits */
+
+.Movie_cast {
+  /* margin: 20px 0; */
+  padding: 10px;
+  color: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cast-list {
+  display: flex; /* Keeps elements in a horizontal row */
+  gap: 15px; /* Spacing between tiles */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.cast-list::-webkit-scrollbar {
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+.cast-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.cast-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Individual Cast Tile */
+.cast-card {
+  flex: 0 0 auto; /* Prevents shrinking */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  width: fit; /* Fixed size for uniform tiles */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cast-card img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.cast-name {
+  font-weight: bold;
+  color: #000;
+  margin: 8px 0;
+}
+
+.cast-character {
+  color: #555;
+  font-size: 12px;
+}
+
+/* Cast Tile Hover Effect */
+.cast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* "View More" Tile */
+.view-more-tile {
+  flex: 0 0 auto; /* Makes it behave like a tile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Matches the width of other tiles */
+  height: 225px; /* Matches the height of other tiles */
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+/* .view-more-tile:hover {
+  background-color: #121212;
+} */
+
+.view-more-text {
+  padding: 0 10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Review Card */
+/* Reviews Section */
+
+.review {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+.review-card {
+  border: 1px solid #ddd;
+  width: 80%;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+  background-color: #333;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.arrow:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.left-arrow {
+  margin-right: 8px;
+}
+
+.right-arrow {
+  margin-left: 8px;
+}
+.review-info {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.review-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-meta h4 {
+  margin: 0;
+}
+
+.review-meta p {
+  margin: 4px 0;
+}
+
+.review-text {
+  position: relative;
+  min-height: 150px; /* Fixed height to prevent shrinking */
+  max-height: 150px; /* Fixed height to prevent expanding */
+  overflow: auto; /* Make content scrollable if it overflows */
+  padding-right: 10px; /* Add space for scrollbar */
+}
+
+.review-text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.review-text::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.review-text::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+.review-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.toggle-button {
+  background: none;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+.toggle-button:hover {
+  color: #0056b3;
+}

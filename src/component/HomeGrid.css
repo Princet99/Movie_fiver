@@ -1,0 +1,38 @@
+#root{
+  color: white;
+}
+.Poster_item {
+  height: 300px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.Movie_Poster {
+  height: 75%;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.Movie_Poster img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Updated styling */
+.Movie_Name {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+}
+
+.Poster_item a {
+  text-decoration: none;
+}
+
+.Movie_Name:hover {
+  text-decoration: underline; 
+}
+
+
